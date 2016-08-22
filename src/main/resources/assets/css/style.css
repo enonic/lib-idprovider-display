@@ -41,6 +41,8 @@ body, input, button {
 
 .form-input > input {
     border: none;
+    width: 14em;
+    font-size: 15px;
 }
 
 .form-button {
@@ -128,8 +130,8 @@ body, input, button {
 }
 
 .form-input-img-svg {
-    width: 23px;
-    height: 23px;
+    width: 22px;
+    height: 22px;
 }
 
 .form-text {
