@@ -8,7 +8,8 @@ body {
 }
 
 .form-head {
-    background-color: #e6e6e6;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background-color: #e0e0e0;
 }
 
 .form-input-img {
