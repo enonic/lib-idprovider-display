@@ -10,8 +10,9 @@ html, body, .container {
     height: 100%
 }
 
-input {
+input, button, div {
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 /***************************************************
@@ -22,33 +23,35 @@ body, input, button {
     font-family: 'Open Sans', arial, sans-serif;
 }
 
-.form-login-heading {
+.form-title {
     font-weight: 400;
     font-size: 30px;
     line-height: 1.1;
 }
 
-.form-input, .form-button, .form-error-message {
-    font-size: 16px;
+.form-error {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.form-message {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.form-input, .form-message {
     border: none;
 }
 
 .form-button {
+    background-color: transparent;
     color: #fff;
+    border: 1px solid #fff;
     border-radius: 2px;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15);
 }
 
-.form-error-message {
-    color: #d9534f;
-}
-
-.form-login-text, .form-forgot-pwd-link {
+.form-text, .form-forgot-pwd-link {
     font-size: 15px;
-}
-
-.form-user-image, .form-login {
-    box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.15);
 }
 
 /***************************************************
@@ -79,22 +82,24 @@ body, input, button {
     height: 64px;
 }
 
-.form-login {
-    min-width: 230px;
-    padding: 48px 40px 10px 40px;
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: -48px;
+    top: -62px;
 }
 
-.form-login-heading, .form-input, .form-error-message, .form-button {
+.form-head {
+    padding-top: 62px;
+}
+
+.form-head, .form-input, .form-error, .form-message, .form-foot {
     text-align: center;
     width: 100%;
 }
 
-.form-input, .form-button, .form-forgot-pwd-link, .form-error-message {
+.form-input, .form-button, .form-forgot-pwd-link, .form-error, .form-message {
     padding: 10px;
 }
 
@@ -103,7 +108,7 @@ body, input, button {
     margin-bottom: 10px;
 }
 
-.form-login-text {
+.form-text {
     margin-top: 0;
 }
 
@@ -116,5 +121,5 @@ body, input, button {
 ****************************************************/
 
 .hidden {
-    visibility: hidden;
+    /*visibility: hidden;*/
 }

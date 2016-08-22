@@ -1,7 +1,12 @@
-body, .form-button {
+body {
+    background: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+    background-color: #000;
+}
+
+.form {
     background-color: #fff;
 }
 
-.form-login {
-    background-color: #f7f7f7;
+.form-head {
+    background-color: rgba(0, 0, 0, 0.1);
 }
