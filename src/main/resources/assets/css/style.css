@@ -20,7 +20,7 @@ input, button, div {
 ****************************************************/
 
 body, input, button {
-    font-family: 'Open Sans', arial, sans-serif;
+    font-family: 'Roboto', 'Open Sans', arial, sans-serif;
 }
 
 .form-title {
@@ -124,8 +124,8 @@ body, input, button {
 }
 
 .form-input-img-svg {
-    width: 18px;
-    height: 18px;
+    width: 23px;
+    height: 23px;
 }
 
 .form-text {
