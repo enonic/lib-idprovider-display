@@ -43,33 +43,51 @@
             <span id="error" class="form-error-text">Login failed!</span>
         </div>
 
-        <div id="formMessage" class="form-message hidden">
-            <span id="message" class="form-message-text">Message</span>
+        {{#message}}
+        <div id="formMessage" class="form-message">
+            <span id="message" class="form-message-text">{{message}}</span>
         </div>
+        {{/message}}
 
+        {{#body}}
         <div class="form-body">
 
+            {{#body.username}}
             <div class="form-input">
                 <div class="form-input-img">
                     <img class="form-input-img-svg" src="{{assetUrl}}/img/envelop.svg">
                 </div>
-                <input type="text" id="inputUsername" placeholder="Username or email" required autofocus>
+                <input type="text" id="inputUsername" placeholder="{{body.username}}" required autofocus>
             </div>
+            {{/body.username}}
 
+            {{#body.password}}
             <div class="form-input">
                 <div class="form-input-img">
                     <img class="form-input-img-svg" src="{{assetUrl}}/img/lock.svg">
                 </div>
-                <input type="password" id="inputPassword" placeholder="Password" required>
+                <input type="password" id="inputPassword" placeholder="{{body.password}}" required>
             </div>
+            {{/body.password}}
+
+            {{#body.forgotPasswordUrl}}
+            <a class="form-forgot-pwd-link" href="{{body.forgotPasswordUrl}}">Forgot your password?</a>
+            {{/body.forgotPasswordUrl}}
         </div>
+        {{/body}}
 
         <div class="form-foot">
-            <button type="submit" class="form-button">LOGIN</button>
+            <button type="submit" class="form-button">{{submit}}</button>
         </div>
     </form>
 </div>
 
 <script src="{{scriptUrl}}"></script>
+<script>
+    $("#form").submit(function (event) {
+        formSubmitted();
+        event.preventDefault();
+    });
+</script>
 </body>
 </html>

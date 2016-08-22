@@ -2,6 +2,7 @@ var portalLib = require('/lib/xp/portal');
 var mustacheLib = require('/lib/xp/mustache');
 
 exports.render = function (params) {
+    params.submit = params.submit || "LOG IN";
 
     params.assetUrl = portalLib.assetUrl({path: "/"});
     params.backgroundStyleUrl = generateBackgroundStyleUrl(params.theme);

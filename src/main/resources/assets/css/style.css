@@ -108,6 +108,10 @@ body, input, button {
     width: 100%;
 }
 
+.form-title {
+    width: 100%;
+}
+
 .form-body {
     margin: 20px 0;
 }
