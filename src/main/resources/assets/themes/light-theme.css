@@ -18,3 +18,7 @@ body {
 .form-input {
     border: 1px solid #e6e6e6;
 }
+
+.form-title {
+    color: #404040;
+}
