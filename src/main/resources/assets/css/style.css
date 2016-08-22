@@ -110,6 +110,10 @@ body, input, button {
     margin: 20px 0;
 }
 
+.form-error, .form-message {
+    margin: 10px 0;
+}
+
 .form-input > input, .form-input-img, .form-forgot-pwd-link, .form-error, .form-message {
     padding: 10px;
 }
