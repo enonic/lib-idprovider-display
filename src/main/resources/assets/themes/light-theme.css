@@ -8,5 +8,13 @@ body {
 }
 
 .form-head {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #e6e6e6;
+}
+
+.form-input-img {
+    background-color: #f2f2f2;
+}
+
+.form-input {
+    border: 1px solid #e6e6e6;
 }

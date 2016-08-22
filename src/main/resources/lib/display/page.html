@@ -48,8 +48,19 @@
 
         <div class="form-body">
 
-            <input type="text" id="inputUsername" class="form-input" placeholder="Username or email" required autofocus>
-            <input type="password" id="inputPassword" class="form-input" placeholder="Password" required>
+            <div class="form-input">
+                <div class="form-input-img">
+                    <img class="form-input-img-svg" src="{{assetUrl}}/img/envelop.svg">
+                </div>
+                <input type="text" id="inputUsername" placeholder="Username or email" required autofocus>
+            </div>
+
+            <div class="form-input">
+                <div class="form-input-img">
+                    <img class="form-input-img-svg" src="{{assetUrl}}/img/lock.svg">
+                </div>
+                <input type="password" id="inputPassword" placeholder="Password" required>
+            </div>
         </div>
 
         <div class="form-foot">

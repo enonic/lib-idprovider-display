@@ -39,7 +39,7 @@ body, input, button {
     color: #fff;
 }
 
-.form-input, .form-message {
+.form-input > input {
     border: none;
 }
 
@@ -58,15 +58,18 @@ body, input, button {
 ** Positioning settings
 ****************************************************/
 
+.container, .container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container * {
     flex-shrink: 0;
 }
 
-.container, .form-user-image {
-    display: flex;
+.container, .form-user-image, .form-body {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .form-user-image {
@@ -83,15 +86,19 @@ body, input, button {
 }
 
 .form {
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     top: -62px;
+    border-radius: 4px;
 }
 
 .form-head {
     padding-top: 62px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .form-head, .form-input, .form-error, .form-message, .form-foot {
@@ -99,13 +106,22 @@ body, input, button {
     width: 100%;
 }
 
-.form-input, .form-button, .form-forgot-pwd-link, .form-error, .form-message {
+.form-body {
+    margin: 20px 0;
+}
+
+.form-input > input, .form-input-img, .form-button, .form-forgot-pwd-link, .form-error, .form-message {
     padding: 10px;
 }
 
 .form-input, .form-button {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.form-input-img-svg {
+    width: 18px;
+    height: 18px;
 }
 
 .form-text {
@@ -116,10 +132,15 @@ body, input, button {
     cursor: pointer;
 }
 
+.form-foot {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
 /***************************************************
 ** Dynamic settings
 ****************************************************/
 
 .hidden {
-    /*visibility: hidden;*/
+    display: none !important;
 }
