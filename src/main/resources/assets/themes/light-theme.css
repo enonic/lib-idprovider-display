@@ -3,10 +3,6 @@ body {
     background-color: #e8ebef;
 }
 
-.form {
-    box-shadow: 0 0 2px rgba(17, 17, 24, .6);
-}
-
 .form-head {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
     background-color: #e0e0e0;

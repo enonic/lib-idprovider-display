@@ -74,6 +74,11 @@ body, input, button {
 
 .form {
     background-color: #fff;
+    box-shadow: 0 0 2px rgba(17, 17, 24, .6);
+}
+
+.form-user-image {
+    box-shadow: 0 0 2px rgba(17, 17, 24, .6);
 }
 
 /***************************************************
