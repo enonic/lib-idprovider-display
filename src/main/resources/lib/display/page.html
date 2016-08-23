@@ -39,15 +39,9 @@
             <h2 class="form-title">{{title}}</h2>
         </div>
 
-        <div id="formError" class="form-error hidden">
-            <span id="error" class="form-error-text">Login failed!</span>
-        </div>
-
-        {{#message}}
-        <div id="formMessage" class="form-message">
+        <div id="formMessage" class="form-message {{messageClass}}">
             <span id="message" class="form-message-text">{{message}}</span>
         </div>
-        {{/message}}
 
         {{#body}}
         <div class="form-body">

@@ -4,6 +4,17 @@ var mustacheLib = require('/lib/xp/mustache');
 exports.render = function (params) {
     params.submit = params.submit || "LOG IN";
 
+    if (params.error) {
+        params.messageClass = "form-message-error";
+        params.message = params.error;
+    } else if (params.info) {
+        params.messageClass = "form-message-info";
+        params.message = params.info;
+    } else {
+        params.messageClass = "hidden";
+        params.message = "";
+    }
+
     params.assetUrl = portalLib.assetUrl({path: "/"});
     params.backgroundStyleUrl = generateBackgroundStyleUrl(params.theme);
     params.colorStyleUrl = generateColorStyleUrl(params.theme);

@@ -15,6 +15,10 @@ input, button, div {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
 /***************************************************
 ** Font & color settings
 ****************************************************/
@@ -29,12 +33,12 @@ body, input, button {
     line-height: 1.1;
 }
 
-.form-error {
+.form-message-error {
     background-color: #d9534f;
     color: #fff;
 }
 
-.form-message {
+.form-message-info {
     background-color: #5cb85c;
     color: #fff;
 }
@@ -52,8 +56,8 @@ body, input, button {
     border-radius: 2px;
 }
 
-.form-text, .form-forgot-pwd-link {
-    font-size: 15px;
+.form-forgot-pwd-link {
+    font-size: 13px;
 }
 
 /***************************************************
@@ -103,12 +107,12 @@ body, input, button {
     border-top-right-radius: 4px;
 }
 
-.form-head, .form-input, .form-error, .form-message, .form-foot {
+.form-head, .form-input, .form-message, .form-foot {
     text-align: center;
     width: 100%;
 }
 
-.form-title {
+.form-title, .form-message-text {
     width: 100%;
 }
 
@@ -116,11 +120,11 @@ body, input, button {
     margin: 20px 0;
 }
 
-.form-error, .form-message {
+.form-message {
     margin: 10px 0;
 }
 
-.form-input > input, .form-input-img, .form-forgot-pwd-link, .form-error, .form-message {
+.form-input > input, .form-input-img, .form-forgot-pwd-link, .form-message {
     padding: 10px;
 }
 
