@@ -64,6 +64,15 @@
             </div>
             {{/body.password}}
 
+            {{#body.confirmation}}
+            <div class="form-input">
+                <div class="form-input-img">
+                    <img class="form-input-img-svg" src="{{assetUrl}}/img/lock.svg">
+                </div>
+                <input type="password" id="inputConfirmation" placeholder="{{body.confirmation}}" required>
+            </div>
+            {{/body.confirmation}}
+
             {{#body.forgotPasswordUrl}}
             <a class="form-forgot-pwd-link" href="{{body.forgotPasswordUrl}}">Forgot your password?</a>
             {{/body.forgotPasswordUrl}}
