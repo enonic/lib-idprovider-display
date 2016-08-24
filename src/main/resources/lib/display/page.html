@@ -10,6 +10,9 @@
     <link href="{{backgroundStyleUrl}}" rel="stylesheet">
     <link href="{{colorStyleUrl}}" rel="stylesheet">
     <script src="{{assetUrl}}/js/jquery-2.2.0.min.js"></script>
+    {{#body.reCaptcha}}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    {{/body.reCaptcha}}
 
     {{{config}}}
 
@@ -73,14 +76,20 @@
             </div>
             {{/body.confirmation}}
 
+            {{#body.reCaptcha}}
+            <div class="g-recaptcha" style="width:254px;" data-sitekey="{{body.reCaptcha}}">
+            </div>
+            {{/body.reCaptcha}}
+
             {{#body.forgotPasswordUrl}}
             <a class="form-forgot-pwd-link" href="{{body.forgotPasswordUrl}}">Forgot your password?</a>
             {{/body.forgotPasswordUrl}}
         </div>
         {{/body}}
 
+
         <div class="form-foot">
-            <button type="submit" class="form-button">{{submit}}</button>
+            <button id="formSubmit" type="submit" class="form-button">{{submit}}</button>
         </div>
     </form>
 </div>
@@ -88,7 +97,9 @@
 <script src="{{scriptUrl}}"></script>
 <script>
     $("#form").submit(function (event) {
+        $("#formSubmit").prop('disabled', true);
         formSubmitted();
+        $("#formSubmit").prop('disabled', false);
         event.preventDefault();
     });
 </script>
