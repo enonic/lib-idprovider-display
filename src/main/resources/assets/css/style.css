@@ -144,7 +144,7 @@ body {
     border-top-right-radius: 4px;
 }
 
-.form-head, .form-input, .form-message, .form-foot {
+.form-head, .form-message, .form-foot {
     text-align: center;
     width: 100%;
 }
@@ -162,7 +162,7 @@ body {
 }
 
 .form-input-elem {
-    width: 200px;
+    width: 210px;
 }
 
 .form-button {
@@ -193,7 +193,7 @@ body {
 }
 
 .g-recaptcha {
-    transform: scale(0.85);
+    transform: scale(0.83);
 }
 
 .rc-anchor-light {
