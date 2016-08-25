@@ -33,9 +33,15 @@
 
 <body>
 <div class="container">
+
+
+    {{#profileUrl}}
+    <img class="form-user-profile" src="{{profileUrl}}">
+    {{/profileUrl}}
     <div class="form-user-image">
         <img class="form-user-image-svg" src="{{assetUrl}}/img/user.svg">
     </div>
+
 
     <form id="form" class="form">
         <div class="form-head">

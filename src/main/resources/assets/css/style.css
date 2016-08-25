@@ -112,6 +112,15 @@ body, input, button {
     height: 64px;
 }
 
+.form-user-profile {
+    width: 96px;
+    height: 96px;
+    position: relative;
+    top: 96px;
+    border-radius: 48px;
+    z-index: 2;
+}
+
 .form {
     width: 300px;
     display: flex;
