@@ -45,7 +45,7 @@
 
     <form id="form" class="form">
         <div class="form-head">
-            <h2 class="form-title">{{title}}</h2>
+            <span class="form-title">{{title}}</span>
         </div>
 
         <div id="formMessage" class="form-message {{messageClass}}">
@@ -60,7 +60,7 @@
                 <div class="form-input-img">
                     <img class="form-input-img-svg" src="{{assetUrl}}/img/envelop.svg">
                 </div>
-                <input type="text" id="inputUsername" placeholder="{{body.username}}" required autofocus>
+                <input type="text" id="inputUsername" class="form-input-elem" placeholder="{{body.username}}" required autofocus>
             </div>
             {{/body.username}}
 
@@ -69,7 +69,7 @@
                 <div class="form-input-img">
                     <img class="form-input-img-svg" src="{{assetUrl}}/img/lock.svg">
                 </div>
-                <input type="password" id="inputPassword" placeholder="{{body.password}}" required>
+                <input type="password" id="inputPassword" class="form-input-elem" placeholder="{{body.password}}" required>
             </div>
             {{/body.password}}
 
@@ -78,12 +78,12 @@
                 <div class="form-input-img">
                     <img class="form-input-img-svg" src="{{assetUrl}}/img/lock.svg">
                 </div>
-                <input type="password" id="inputConfirmation" placeholder="{{body.confirmation}}" required>
+                <input type="password" id="inputConfirmation" class="form-input-elem" placeholder="{{body.confirmation}}" required>
             </div>
             {{/body.confirmation}}
 
             {{#body.reCaptcha}}
-            <div class="g-recaptcha" style="width:254px;" data-sitekey="{{body.reCaptcha}}">
+            <div class="g-recaptcha" data-sitekey="{{body.reCaptcha}}">
             </div>
             {{/body.reCaptcha}}
 

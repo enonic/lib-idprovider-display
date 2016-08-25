@@ -12,7 +12,7 @@ html, body, .container {
 
 input, button, div {
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a {
@@ -33,6 +33,10 @@ body, input, button {
     line-height: 1.1;
 }
 
+body {
+    font-size: 14px;
+}
+
 .form-message-error {
     background-color: #d9534f;
     color: #fff;
@@ -45,8 +49,7 @@ body, input, button {
 
 .form-input > input {
     border: none;
-    width: 14em;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .form-button {
@@ -68,7 +71,7 @@ body, input, button {
     border: 1px solid #e6e6e6;
 }
 
-.form-title {
+.form-title, a {
     color: #404040;
 }
 
@@ -97,6 +100,10 @@ body, input, button {
 
 .container, .form-user-image, .form-body {
     flex-direction: column;
+}
+
+.form-title {
+    margin: 10px 0 20px 0;
 }
 
 .form-user-image {
@@ -150,12 +157,12 @@ body, input, button {
     margin: 20px 0;
 }
 
-.form-message {
-    margin: 10px 0;
-}
-
 .form-input > input, .form-input-img, .form-forgot-pwd-link, .form-message {
     padding: 10px;
+}
+
+.form-input-elem {
+    width: 200px;
 }
 
 .form-button {
@@ -168,8 +175,8 @@ body, input, button {
 }
 
 .form-input-img-svg {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
 }
 
 .form-text {
