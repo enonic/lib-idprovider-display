@@ -15,6 +15,10 @@ input, button, div {
     font-size: 14px;
 }
 
+button {
+    border: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -52,8 +56,7 @@ body {
     font-size: 14px;
 }
 
-.form-button {
-    background-color: transparent;
+.form-foot-text {
     color: #fff;
     border: 1px solid #fff;
     border-radius: 2px;
@@ -88,7 +91,7 @@ body {
 ** Positioning settings
 ****************************************************/
 
-.container, .container div, .container form {
+.container, .container div, .container form, .form-foot {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +106,7 @@ body {
 }
 
 .form-title {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 15px 0;
 }
 
 .form-user-image {
@@ -165,11 +168,7 @@ body {
     width: 210px;
 }
 
-.form-button {
-    padding: 10px 20px;
-}
-
-.form-input, .form-button {
+.form-input {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -183,13 +182,15 @@ body {
     margin-top: 0;
 }
 
-.form-button {
-    cursor: pointer;
-}
-
 .form-foot {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
+    cursor: pointer;
+}
+
+.form-foot-text {
+    margin: 10px 0;
+    padding: 5px 20px;
 }
 
 .g-recaptcha {
