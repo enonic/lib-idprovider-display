@@ -103,11 +103,13 @@
 <script src="{{scriptUrl}}"></script>
 <script>
     $("#form").submit(function (event) {
-        $("#formSubmit").prop('disabled', true);
         formSubmitted();
-        $("#formSubmit").prop('disabled', false);
         event.preventDefault();
     });
+
+    function enableFormSubmit(enabled) {
+        $("#formSubmit").prop('disabled', !enabled);
+    }
 </script>
 </body>
 </html>
