@@ -34,3 +34,11 @@ repositories {
         url 'http://repo.enonic.com/public'
     }
 }
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository( url: 'http://repo.enonic.net/artifactory/public' )
+        }
+    }
+}
