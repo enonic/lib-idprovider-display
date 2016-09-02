@@ -89,6 +89,7 @@ body {
 
 .form-foot[disabled], .form-foot[disabled]:hover {
     background-color: #e0e0e0;
+    cursor: default;
 }
 
 /***************************************************
