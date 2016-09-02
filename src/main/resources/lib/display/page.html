@@ -12,6 +12,11 @@
     <script src="{{assetUrl}}/js/jquery-2.2.0.min.js"></script>
     {{#body.reCaptcha}}
     <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        function reCaptchaDataCallback() {
+            enableFormSubmit(true);
+        }
+    </script>
     {{/body.reCaptcha}}
 
     {{{config}}}
@@ -83,7 +88,7 @@
             {{/body.confirmation}}
 
             {{#body.reCaptcha}}
-            <div class="g-recaptcha" data-sitekey="{{body.reCaptcha}}">
+            <div class="g-recaptcha" data-sitekey="{{body.reCaptcha}}" data-callback="reCaptchaDataCallback">
             </div>
             {{/body.reCaptcha}}
 
@@ -111,5 +116,13 @@
         $("#formSubmit").prop('disabled', !enabled);
     }
 </script>
+
+{{#body.reCaptcha}}
+<script>
+    enableFormSubmit(false);
+</script>
+{{/body.reCaptcha}}
+
+
 </body>
 </html>
