@@ -8,6 +8,7 @@ This library provides configurable interfaces to ID Providers.
 | App version | Required XP version | Download |
 | ----------- | ------------------- | -------- |
 | 1.0.0 | 6.7.0 | [Download](http://repo.enonic.com/public/com/enonic/lib/idproviderdisplay/1.0.0/idproviderdisplay-1.0.0.jar) |
+| 1.0.1 | 6.7.0 | [Download](http://repo.enonic.com/public/com/enonic/lib/idproviderdisplay/1.0.1/idproviderdisplay-1.0.1.jar) |
 
 
 ## Building and deploying
