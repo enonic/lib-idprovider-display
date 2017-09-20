@@ -1,44 +1,33 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-        maven {
-            url 'http://repo.enonic.com/public'
-        }
-    }
-
-    dependencies {
-        classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
-    }
-}
-
-apply plugin: 'com.enonic.xp.app'
-apply plugin: 'maven'
-
-app {
-    name = project.appName
-    displayName = project.displayName
-    vendorName = 'Enonic AS'
-    vendorUrl = 'http://enonic.com'
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'maven'
+    id 'com.enonic.defaults' version '1.0.3'
+    id 'com.enonic.xp.doc' version '1.0.7'
 }
 
 dependencies {
-    include "com.enonic.xp:lib-portal:${xpVersion}"
-    include "com.enonic.xp:lib-mustache:${xpVersion}"
+    compile "com.enonic.xp:lib-portal:${xpVersion}"
+    compile "com.enonic.xp:lib-mustache:${xpVersion}"
+    testCompile "com.enonic.xp:testing:${xpVersion}"
+
 }
 
 repositories {
     mavenLocal()
     jcenter()
-    maven {
-        url 'http://repo.enonic.com/public'
+    xp.enonicRepo()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
     }
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository( url: 'http://repo.enonic.net/artifactory/public' )
-        }
-    }
+check.dependsOn jacocoTestReport
+
+artifacts {
+    archives jar
 }
