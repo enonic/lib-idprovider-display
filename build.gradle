@@ -3,7 +3,6 @@ plugins {
     id 'jacoco'
     id 'maven-publish'
     id 'com.enonic.defaults' version '2.0.1'
-    id 'com.enonic.xp.app' version '2.0.0'
 }
 
 dependencies {
@@ -14,18 +13,12 @@ dependencies {
 
 }
 
-app {
-    name = project.appName
-    displayName = 'ID Provider Display library'
-    vendorName = 'Enonic AS'
-    vendorUrl = 'http://enonic.com'
-    systemVersion = "${xpVersion}"
-}
-
 repositories {
     mavenLocal()
     jcenter()
-    xp.enonicRepo()
+    maven {
+        url 'http://repo.enonic.com/public'
+    }
 }
 
 jacocoTestReport {
