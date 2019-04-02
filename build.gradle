@@ -1,16 +1,25 @@
 plugins {
     id 'java'
     id 'jacoco'
-    id 'maven'
-    id 'com.enonic.defaults' version '1.0.3'
-    id 'com.enonic.xp.doc' version '1.0.7'
+    id 'maven-publish'
+    id 'com.enonic.defaults' version '2.0.1'
+    id 'com.enonic.xp.app' version '2.0.0'
 }
 
 dependencies {
     compile "com.enonic.xp:lib-portal:${xpVersion}"
-    compile "com.enonic.xp:lib-mustache:${xpVersion}"
+    compile "com.enonic.lib:lib-mustache:2.0.0-B1"
+
     testCompile "com.enonic.xp:testing:${xpVersion}"
 
+}
+
+app {
+    name = project.appName
+    displayName = 'ID Provider Display library'
+    vendorName = 'Enonic AS'
+    vendorUrl = 'http://enonic.com'
+    systemVersion = "${xpVersion}"
 }
 
 repositories {
