@@ -9,7 +9,7 @@ This library provides configurable interfaces to ID Providers.
 | ----------- | ------------------- | -------- |
 | 1.0.0 | 6.7.0 | [Download](http://repo.enonic.com/public/com/enonic/lib/idproviderdisplay/1.0.0/idproviderdisplay-1.0.0.jar) |
 | 1.0.1 | 6.7.0 | [Download](http://repo.enonic.com/public/com/enonic/lib/idproviderdisplay/1.0.1/idproviderdisplay-1.0.1.jar) |
-| 2.0.0 | 7.0.0 | [Download](http://repo.enonic.com/public/com/enonic/lib/idproviderdisplay/2.0.0/idproviderdisplay-2.0.0.jar) |
+| 2.0.0 | 7.0.0 | [Download](http://repo.enonic.com/public/com/enonic/lib/idproviderdisplay/2.0.0/lib-idproviderdisplay-2.0.0.jar) |
 
 
 ## Building and deploying
