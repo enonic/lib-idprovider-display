@@ -1,33 +1,17 @@
 plugins {
     id 'java'
-    id 'jacoco'
-    id 'maven'
-    id 'com.enonic.defaults' version '1.0.3'
-    id 'com.enonic.xp.doc' version '1.0.7'
+    id 'maven-publish'
+    id 'com.enonic.defaults' version '2.0.1'
+    id 'com.enonic.xp.base' version '2.0.0'
 }
 
 dependencies {
     compile "com.enonic.xp:lib-portal:${xpVersion}"
-    compile "com.enonic.xp:lib-mustache:${xpVersion}"
-    testCompile "com.enonic.xp:testing:${xpVersion}"
-
+    compile "com.enonic.lib:lib-mustache:2.0.0-RC1"
 }
 
 repositories {
     mavenLocal()
     jcenter()
     xp.enonicRepo()
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled = true
-        html.enabled = true
-    }
-}
-
-check.dependsOn jacocoTestReport
-
-artifacts {
-    archives jar
 }
