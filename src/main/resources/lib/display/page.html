@@ -48,7 +48,7 @@
     </div>
 
 
-    <form id="form" class="form">
+    <form id="userLogin" class="form" method="POST">
         <div class="form-head">
             <span class="form-title">{{title}}</span>
         </div>
@@ -58,7 +58,7 @@
         </div>
 
         {{#body}}
-        <div class="form-body">
+        <div class="form-body" id="login">
 
             {{#body.username}}
             <div class="form-input">
@@ -77,6 +77,15 @@
                 <input type="password" id="inputPassword" class="form-input-elem" placeholder="{{body.password}}" required>
             </div>
             {{/body.password}}
+
+            {{#body.code}}
+            <div class="form-input">
+                <div class="form-input-img">
+                    <img class="form-input-img-svg" src="{{assetUrl}}/img/lock.svg">
+                </div>
+                <input type="text" id="inputCode" class="form-input-elem" placeholder="{{body.code}}" required autofocus>
+            </div>
+            {{/body.code}}
 
             {{#body.confirmation}}
             <div class="form-input">
@@ -98,16 +107,18 @@
         </div>
         {{/body}}
 
-
         <button id="formSubmit" type="submit" class="form-foot">
             <span class="form-foot-text">{{submit}}</span>
         </button>
     </form>
+    
 </div>
 
 <script src="{{scriptUrl}}"></script>
 <script>
-    $("#form").submit(function (event) {
+    const loginForm = document.getElementById("userLogin");
+    
+    loginForm.addEventListener("submit", function (event) {
         formSubmitted();
         event.preventDefault();
     });
