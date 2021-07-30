@@ -51,6 +51,9 @@
     <form id="userLogin" class="form" method="POST">
         <div class="form-head">
             <span class="form-title">{{title}}</span>
+            {{#subheader}}
+            <span class="form-subheader">{{subheader}}</span>
+            {{/subheader}}
         </div>
 
         <div id="formMessage" class="form-message {{messageClass}}">
