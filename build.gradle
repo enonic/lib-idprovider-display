@@ -7,7 +7,7 @@ plugins {
 
 dependencies {
     implementation "com.enonic.xp:lib-portal:${xpVersion}"
-    implementation "com.enonic.lib:lib-mustache:2.1.0"
+    implementation "com.enonic.lib:lib-mustache:2.1.1"
 }
 
 repositories {
